@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1566.044" height="485.982" viewBox="0 0 1566.044 485.982">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.969" y1="-0.154" x2="0.031" y2="0.473" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a5a2f6"/>
+      <stop offset="1" stop-color="#3d37f1"/>
+    </linearGradient>
+    <filter id="hero-bg-shape" x="0" y="0" width="1566.044" height="485.982" filterUnits="userSpaceOnUse">
+      <feOffset dy="40" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#c5c3f9" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#hero-bg-shape)">
+    <path id="hero-bg-shape-2" data-name="hero-bg-shape" d="M6784.358-454.355C6945.717-420.71,7041-445,7213-404s160,94,392.828,141.863S8076-351.752,8076-351.752V-618H6630S6623-488,6784.358-454.355Z" transform="translate(-6569.96 638)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+   font-family: "myanmar-font";
+   font-weight: normal;
+   src: url("../fonts/MyanmarSquare.ttf");
+}
+
+:root {
+   --primary : #00d1ff;
+   --secondary : #707070;
+   --light : #ffffff;
+   --dark : #000000;
+   --br : 5px;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Oswald', 'myanmar-font';
+   color: var(--secondary);
+}
+
+.divider {
+   background: var(--secondary);
+   height: 5px;
+}
+#app-container{
+   width: 700px;
+   margin: 100px auto;
+   /*background-color: darkseagreen*/
+}
+
+.first-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.brand-container{
+   display: flex;
+   align-items: center;
+   padding: 10px;
+
+}
+
+.brand-logo{
+   width: 50px;
+}
+
+.brand-name{
+   margin: 10px;
+   font-size: 30px;
+
+}
+
+.result-container{
+   display: flex;
+   align-items: center;
+}
+
+.result{
+   font-size: 30px;
+   padding: 10px;
+}
+
+.second-container{
+   display: flex;
+   margin: 10px;
+   justify-content: space-between;
+}
+.container{
+   width: 150px;
+}
+
+.input, .from, .to {
+   width: 100%;
+   padding: 5px 10px;
+   border: 1px solid var(--secondary);
+   border-radius: var(--br);
+}
+.input {
+   text-align: right;
+}
+
+.container label{
+   display: block;
+   margin-bottom: 5px;
+}
+
+.calc-btn {
+   width: 100%;
+   height: 100%;
+   border-radius: var(--br);
+   border: 1px solid var(--primary);
+   background-color: var(--primary);
+   color: var(--light);
+   font-size: 20px;
+   text-transform: uppercase;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.calc-btn:active {
+   background-color: #06c0ec;
+   color: var(--secondary);
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+body{
+   transition: 0.5s;
+}
+/* Firefox */
+input[type=number] {
+   -moz-appearance: textfield;
+}
+
+/*select::-ms-expand {	display: none; }*/
+/*select{*/
+/*   -webkit-appearance: none;*/
+/*   appearance: none;*/
+/*}*/
+/*@-moz-document url-prefix(){*/
+/*   .ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}*/
+/*}*/
+
+input:focus, select:focus, button:focus {
+   outline: none;
+}
+
+.history {
+   width: 100%;
+   margin-top: 20px;
+}
+
+.history td, .history th {
+   padding: 8px;
+   border-radius: var(--br);
+}
+
+.history tr:nth-child(even) {background-color: #f2f2f2;}
+
+.history tr:hover {background-color: #dddddd;}
+
+.history th:last-child {
+   text-align: right;
+}
+.history tr td:last-child {
+   text-align: right;
+}
+
+.history th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: var(--primary);
+   color: var(--light);
+}
+
+#rowSpace td {
+   text-align: center;
+}
+
+.delete-container{
+   display: flex;
+   width: 100%;
+   justify-content: flex-end;
+}
+#delete-btn {
+   margin-top: 10px;
+   height: 50px;
+   width: 100px;
+   border-radius: var(--br);
+   border: 1px solid var(--primary);
+   background-color: var(--primary);
+   color: var(--light);
+   font-size: 15px;
+   text-transform: uppercase;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#delete-btn:active {
+   background-color: #06c0ec;
+   color: var(--secondary);
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.mode-change{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   border: none;
+   background: var(--dark);
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+}
+
+.mode-change .fas{
+   color: var(--light) !important;
+}
+
+@media screen and (max-width: 480px){
+   #app-container {
+      width: 96%;
+      margin: 30px auto;
+   }
+   .first-container {
+      flex-flow: column;
+      align-items: flex-end;
+   }
+   .brand-container {
+      width: 100%;
+   }
+
+   .second-container {
+      flex-wrap: wrap;
+   }
+   .container {
+      width: 100%;
+   }
+   .input-container {
+      margin-bottom: 10px;
+   }
+   .from-container, .to-container {
+      width: 46%;
+      margin-bottom: 15px;
+   }
+   .calc-btn {
+      padding: 10px;
+   }
+
+   .input, .from, .to {
+      padding: 15px 10px;
+
+   }
+}

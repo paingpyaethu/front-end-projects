@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Primary Meta Tags -->
+   <title>P2T MMS Exchange</title>
+
+   <link rel="icon" href="img/logo.svg" type="image/icon type">
+
+   <meta name="title" content="P2T MMS Exchange">
+   <meta name="description" content="MMS Ex - Mini Project">
+   
+   <!-- Open Graph / Facebook -->
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://mms-it.com/">
+   <meta property="og:title" content="P2T MMS Exchange">
+   <meta property="og:description" content="MMS Ex - Mini Project">
+   <meta property="og:image" content="img/logo.png">
+   
+   <!-- Twitter -->
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:url" content="https://mms-it.com/">
+   <meta property="twitter:title" content="P2T MMS Exchange">
+   <meta property="twitter:description" content="MMS Ex - Mini Project">
+   <meta property="twitter:image" content="img/logo.png">
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/night-mode.css">
+   <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+   <title>Exchange Calculator</title>
+
+</head>
+<body>
+
+   <section id="app-container" class="animate__animated animate__slideInDown">
+      <div class="first-container">
+         <div class="brand-container">
+            <img src="img/logo.svg" class="brand-logo" alt="">
+            <p class="brand-name">MMEx</p>
+         </div>
+         <div class="result-container">
+            <p class="result" id="result">0.00</p>
+         </div>
+      </div>
+      <div class="divider"></div>
+
+      <form class="second-container" id="second-container">
+         <div class="input-container container">
+            <label for="input">Input</label>
+            <input type="number" class="input" id="input" min="1" placeholder="0.00" autofocus required>
+         </div>
+
+         <div class="from-container container">
+            <label for="from">From</label>
+            <select id="from" class="from" required>
+               <option value="" selected >Select Currency</option>
+            </select>
+         </div>
+
+         <div class="to-container container">
+            <label for="to">To</label>
+            <select id="to" class="to" required>
+
+            </select>
+         </div>
+
+         <div class="calculate-container container">
+            <button class="calc-btn" id="calcBtn">Calculate</button>
+         </div>
+      </form>
+
+      <div class="history-container">
+         <table class="history">
+            <thead>
+            <tr>
+               <th>Date</th>
+               <th>From</th>
+               <th>To</th>
+               <th>Result</th>
+            </tr>
+            </thead>
+
+            <tbody id="historyList">
+
+            </tbody>
+
+         </table>
+      </div>
+
+      <div class="delete-container">
+         <button id="delete-btn" onclick="del()">Delete All</button>
+      </div>
+
+   </section>
+
+   <button class="mode-change animate__animated animate__slideInUp" onclick="changeMode()">
+      <i class="fas fa-moon" id="modeIcon"></i>
+   </button>
+
+
+
+   <script src="js/data.js"></script>
+   <script src="js/app.js"></script>
+
+</body>
+</html>
